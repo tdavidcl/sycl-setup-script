@@ -49,15 +49,15 @@ fi
 
 cd sycl_cpl_src
 
-if [ -d "hipSYCL" ] 
+if [ -d "OpenSYCL" ] 
 then
-    echo "hipSYCL folder found -> git pull"
-    cd hipSYCL 
+    echo "OpenSYCL folder found -> git pull"
+    cd OpenSYCL 
     git pull
     cd ..
 else
-    echo "hipSYCL folder not found -> git clone"
-    git clone --recurse-submodules https://github.com/illuhad/hipSYCL
+    echo "OpenSYCL folder not found -> git clone"
+    git clone --recurse-submodules https://github.com/OpenSYCL/OpenSYCL.git
 fi
 
 cd ..
@@ -68,9 +68,9 @@ echo "$(pwd)"
 
 rm -r sycl_cpl
 
-echo "compiling hipSYCL"
-cd sycl_cpl_src/hipSYCL
-cmake -DCMAKE_INSTALL_PREFIX=../../sycl_cpl/hipSYCL .
+echo "compiling OpenSYCL"
+cd sycl_cpl_src/OpenSYCL
+cmake -DCMAKE_INSTALL_PREFIX=../../sycl_cpl/OpenSYCL .
 make -j install
 cd ..
 
