@@ -121,7 +121,7 @@ then
         lib/libsycl-fallback-complex.spv       \
         lib/libsycl.so.6\
         lib/libsycl-fallback-cstring.o         \
-        lib/libsycl.so.6.1.0-0\
+        lib/libsycl.so.6.2.0-0\
         tools/libdevice/libsycldevice\
         install
 
